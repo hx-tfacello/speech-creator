@@ -36,7 +36,7 @@ export async function compressAudioIfNeeded(file: File): Promise<File> {
 
     // Determine compression settings
     let targetSampleRate = 16000; // Start with 16kHz (good for speech)
-    let targetChannels = 1; // Mono
+    const targetChannels = 1; // Mono
 
     // Create offline context with lower sample rate and mono
     const offlineContext = new OfflineAudioContext(
